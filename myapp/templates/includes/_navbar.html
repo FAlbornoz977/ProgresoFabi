@@ -1,0 +1,53 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/Hero-Clean-images.css' %}">
+      <link rel="stylesheet" href="{% static 'css/Navbar-Centered-Links-icons.css' %}">
+      <link rel="stylesheet" href="{% static 'css/Pricing-Yearly--Monthly-badges.css' %}">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<nav class="navbar navbar-expand-md bg-body py-3">
+    <div class="container">
+       <a class="navbar-brand d-flex align-items-center" href="{% url 'home' %}">
+       <img src="{% static 'img/logo%20metal%20sin%20fondo2.png' %}" style="width: 175px;height: 45px;">
+       </a>
+       <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3">
+       <span class="visually-hidden">Toggle navigation</span>
+       <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navcol-3" style="margin-right: 25px;">
+          <ul class="navbar-nav mx-auto">
+             <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Inicio</a></li>
+             <li class="nav-item"><a class="nav-link" href="{% url 'empresa' %}">Nuestra Empresa</a></li>
+             <li class="nav-item"><a class="nav-link" href="{% url 'trabajos' %}">Trabajos</a></li>
+             <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}">Contacto</a></li>
+             <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">Blog</a></li>
+          </ul>
+          {% if user.is_authenticated %}
+          <div class="dropdown ms-auto">
+             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+             {{ user.username }}
+             </button>
+             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="{% url 'create_post' %}">Crear Post</a></li>
+                <li><a class="dropdown-item" href="{% url 'list_comprobantes' %}">Comprobantes</a></li>
+                <li><a class="dropdown-item" href="{% url 'lista_recordatorios' %}">Recordatorios</a></li>
+                <li>
+                   <hr class="dropdown-divider">
+                </li>
+                <li>
+                   <form action="{% url 'logout' %}" method="post">
+                      {% csrf_token %}
+                      <button class="dropdown-item" type="submit">Logout</button>
+                   </form>
+                </li>
+             </ul>
+          </div>
+          {% else %}
+          <a href="{% url 'login' %}">
+          <button class="btn btn-primary me-2 py-2 px-4" type="button" style="background: #FF0000; font-weight: bold; text-shadow: 0px 0px 11px var(--bs-emphasis-color); border-style: none; font-size: 16px;">
+          <strong>Login</strong>
+          </button>
+          </a>
+          {% endif %}
+       </div>
+    </div>
+ </nav>

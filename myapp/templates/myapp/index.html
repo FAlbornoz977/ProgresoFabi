@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+      <title>Metal Diseño</title>
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/Hero-Clean-images.css' %}">
+      <link rel="stylesheet" href="{% static 'css/Navbar-Centered-Links-icons.css' %}">
+      <link rel="stylesheet" href="{% static 'css/Pricing-Yearly--Monthly-badges.css' %}">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   </head>
+   <body>
+      {% include 'includes/_navbar.html' %}
+      <section class="text-white py-4 py-xl-5">
+         <div class="container">
+            <div class="border rounded border-0 d-flex flex-column justify-content-center align-items-center p-4 py-5" style="background: url(&quot;https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&quot;) center / cover;height: 500px;">
+               <div class="row">
+                  <div class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center">
+                     <div>
+                        <h1 class="text-uppercase fw-bold mb-3" style="text-shadow: 5px 3px 0px var(--bs-emphasis-color);">Bienvenido a metal diseño CHile</h1>
+                        <p class="mb-4" style="font-style: italic;text-decoration: underline;border-style: none;font-weight: bold;text-shadow: 2px 0px 4px var(--bs-emphasis-color);">Diseño, Fabricación y Montaje de estructuras metálicas.</p>
+                        <a href="{% url 'contacto' %}"><button class="btn btn-primary me-2 py-2 px-4" type="button" style="background: #FF0000;font-weight: bold;text-shadow: 0px 0px 11px var(--bs-emphasis-color);border-style: none;font-size: 20px;">Contáctanos</button></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container py-4 py-xl-5" style="color: var(--bs-emphasis-color);">
+            <div class="row gy-4 gy-md-0">
+               <div class="col-md-6">
+                  <div class="p-xl-5 m-xl-5"> <img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src={% static 'img/elevator.jpg' %} ></div>
+               </div>
+               <div class="col-md-6 d-md-flex align-items-md-center">
+                  <div style="max-width: 350px;text-align: center;">
+                     <h2 class="text-uppercase fw-bold">¿Que es metal diseño?</h2>
+                     <p class="my-3">METAL DISEÑO CHILE SPA es una empresa familiar especializada en carpintería metálica desde 2009, con experiencia heredada de MAESTRANZA Y CARPINTERIA METALICA RAS. Nos dedicamos a la reparación y fabricación de piezas para ascensores, montacargas y escalas mecánicas, así como a la fabricación e instalación de estructuras de acero inoxidable, continuando una tradición que se inició en 1990.</p>
+                     <a href="{% url 'empresa' %}"><button class="btn btn-primary me-2 py-2 px-4" type="button" style="background: #FF0000;font-weight: bold;text-shadow: 0px 0px 11px var(--bs-emphasis-color);border-style: none;font-size: 16px;"><strong>Conócenos</strong></button></a><a href="{% url 'trabajos' %}"><button class="btn btn-primary me-2 py-2 px-4" type="button" style="background: #FF0000;font-weight: bold;text-shadow: 0px 0px 11px var(--bs-emphasis-color);border-style: none;font-size: 16px;">Ver Trabajos</button></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      {% include 'includes/_footer.html' %}
+      <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/bs-init.js' %}"></script>
+   </body>
+</html>

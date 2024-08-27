@@ -1,0 +1,86 @@
+/* Estilo para el botón de menú desplegable */
+.btn-primary.dropdown-toggle {
+    background-color: #FF0000; /* Color de fondo del botón */
+    border-color: #FF0000; /* Color del borde del botón */
+    font-weight: bold;
+    text-shadow: 0px 0px 11px var(--bs-emphasis-color);
+    border-style: none;
+    font-size: 16px;
+}
+
+/* Estilo para el estado activo del botón de menú desplegable */
+.btn-primary.dropdown-toggle:focus,
+.btn-primary.dropdown-toggle:focus-visible {
+    box-shadow: none; /* Elimina el borde azul de foco */
+    outline: none; /* Elimina el contorno de foco */
+}
+
+/* Estilo para el estado hover del botón de menú desplegable */
+.btn-primary.dropdown-toggle:hover {
+    background-color: #FF0000; /* Mantiene el color de fondo al pasar el cursor */
+    border-color: #FF0000; /* Mantiene el color del borde al pasar el cursor */
+}
+
+/* Estilo para el estado activo del botón de menú desplegable */
+.btn-primary.dropdown-toggle:active {
+    background-color: #FF0000; /* Mantiene el color de fondo al hacer clic */
+    border-color: #FF0000; /* Mantiene el color del borde al hacer clic */
+}
+
+/* Estilo para los ítems del menú desplegable */
+.dropdown-menu {
+    background-color: #f8f9fa; /* Color de fondo del menú desplegable */
+    border: 1px solid #dee2e6; /* Borde del menú desplegable */
+    border-radius: 0.375rem; /* Bordes redondeados */
+}
+
+/* Estilo para los ítems del menú desplegable cuando están activos o en foco */
+.dropdown-item:focus,
+.dropdown-item:hover,
+.dropdown-item:active {
+    background-color: #e9ecef; /* Color de fondo al pasar el cursor */
+    color: #212529; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+}
+
+
+
+/* Estilo para el botón primario */
+.btn-primary {
+    background-color: #FF0000; /* Color de fondo del botón */
+    border-color: #FF0000; /* Color del borde del botón */
+    font-weight: bold; /* Fuente en negrita */
+    text-shadow: 0px 0px 11px var(--bs-emphasis-color); /* Sombra del texto */
+    border-style: none; /* Sin borde */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #ffffff; /* Color del texto */
+    padding: 0.5rem 1rem; /* Espaciado del botón */
+    border-radius: 0.375rem; /* Bordes redondeados */
+    transition: background-color 0.2s, border-color 0.2s; /* Transición suave para el cambio de color */
+}
+
+/* Estilo para el botón cuando está en estado hover (cuando pasas el cursor sobre él) */
+.btn-primary:hover {
+    background-color: #cc0000; /* Color de fondo al pasar el cursor (un tono más oscuro de rojo) */
+    border-color: #cc0000; /* Color del borde al pasar el cursor */
+}
+
+/* Estilo para el botón cuando está en estado activo (cuando se hace clic) */
+.btn-primary:active {
+    background-color: #990000; /* Color de fondo al hacer clic (más oscuro que el estado hover) */
+    border-color: #990000; /* Color del borde al hacer clic */
+}
+
+/* Estilo para el botón cuando está en foco (cuando se selecciona mediante teclado) */
+.btn-primary:focus,
+.btn-primary:focus-visible {
+    box-shadow: none; /* Elimina el borde azul de foco */
+    outline: none; /* Elimina el contorno de foco */
+}
+
+/* Estilo para el botón cuando está deshabilitado */
+.btn-primary:disabled {
+    background-color: #e9ecef; /* Color de fondo cuando está deshabilitado (gris claro) */
+    border-color: #e9ecef; /* Color del borde cuando está deshabilitado */
+    color: #6c757d; /* Color del texto cuando está deshabilitado */
+}
