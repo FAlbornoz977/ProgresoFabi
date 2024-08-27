@@ -1,0 +1,12 @@
+<!-- myapp/templates/myapp/envio/descarga_prueba.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Descarga de Archivo</title>
+</head>
+<body>
+    <h1>Descargar Archivo</h1>
+    <a href="{% url 'track_download' token=correo_enviado.token %}">Descargar Archivo</a>
+</body>
+</html>

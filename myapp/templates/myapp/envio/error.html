@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        let seconds = 3;
+
+        function countdown() {
+            document.getElementById('countdown').textContent = seconds;
+            if (seconds > 0) {
+                seconds--;
+                setTimeout(countdown, 1000);
+            } else {
+                window.location.href = "{% url 'enviar_archivo' %}";
+            }
+        }
+
+        window.onload = countdown;
+    </script>
+    <title>Metal Diseño</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Hero-Clean-images.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Navbar-Centered-Links-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Pricing-Yearly--Monthly-badges.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+ </head>
+ <body>
+    {% include 'includes/_navbar.html' %}
+    <h1>Hubo un error al enviar el archivo.</h1>
+    <p>Serás redirigido en <span id="countdown">3</span> segundos.</p>
+</body>
+{% include 'includes/_footer.html' %}
+      <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/bs-init.js' %}"></script>
+</html>

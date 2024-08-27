@@ -38,3 +38,16 @@ class Recordatorio(models.Model):
 
     def __str__(self):
         return f"{self.titulo} ({self.importancia})"
+    
+
+import uuid
+
+class CorreoEnviado1(models.Model):
+    correo = models.EmailField()
+    archivo = models.FileField(upload_to='archivos/')
+    token = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
+    abierto = models.BooleanField(default=False)
+    descargado = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f'{self.correo} - {self.archivo.name}'

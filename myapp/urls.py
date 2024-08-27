@@ -24,6 +24,13 @@ urlpatterns = [
     path('download/<int:pk>/', views.download_comprobante, name='download_comprobante'),
     path('recordatorios/', views.lista_recordatorios, name='lista_recordatorios'),
     path('eliminar_recordatorio/<int:id>/', views.eliminar_recordatorio, name='eliminar_recordatorio'),
+    
+
+    path('track/download/<uuid:token>/', views.track_download, name='track_download'),
+    path('enviar/', views.enviar_archivo, name='enviar_archivo'),
+    path('exito/', views.exito, name='exito'),
+    path('error/', views.error, name='error'),
+    path('lista/', views.lista_correos_enviados, name='lista_correos_enviados'),
 
 
 
